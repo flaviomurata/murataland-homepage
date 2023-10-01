@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-    --color-body: #b6cbce;
-    --color-heading: #eef3db;
-    --color-base: #033f47;
-    --color-base2: #022a30;
-    --color-brand: #e0f780;
-    --color-brand2: #deff58;
+    --color-body: #212121;
+    --color-heading: #212121;
+    --color-base: #E1F5FE;
+    --color-base2: #E1F5FE; 
+    --color-brand: #26CB48;
+    --color-brand2: #F48FB1;
     --sidbar-width: 240px;
     --font-base: 'Roboto', sans-serif;
 }
@@ -87,7 +87,7 @@ img {
     .navbar {
         min-height: 100vh;
         width: var(--sidbar-width);
-        background: linear-gradient(rgba(3, 63, 71, 0.8),rgba(3, 63, 71, 0.8)), url(); /* add image */
+        background: linear-gradient(rgba(89,147,253),rgba(255, 255, 255, 0.8)), url(); /* add image */
         background-size: cover;
         background-position: center;
     }
@@ -175,9 +175,6 @@ img {
 }
 
 /* SOCIAL ICONS */
-.social-icons {
-
-}
 
 .social-icons a {
     width: 40px;
@@ -189,3 +186,45 @@ img {
     border-radius: 100px;
     font-size: 24px;
 }
+
+/* TRANSITION */
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        opacity: 0;
+        filter:blur(5px);
+        transform: translateX(-100px);
+        transition: all 1s;
+    }
+
+    .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+}
+
+.logo:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.logo:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.logo:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.logo:nth-child(5) {
+    transition-delay: 800ms;
+}
+
+.logo:nth-child(6) {
+    transition-delay: 1000ms;
+}
+
+
+
+
+
